@@ -26,7 +26,12 @@ extension JTAppleCalendarView: UICollectionViewDataSource, UICollectionViewDeleg
             case let .fromType(classType): reuseIdentifier = classType.description()
             }
         } else {
-            reuseIdentifier = delegate!.calendar(self, sectionHeaderIdentifierForDate: validDate.dateRange, belongingTo: validDate.month)
+            guard let identifiero = delegate!.calendar(self, sectionHeaderIdentifierForDate: validDate.dateRange, belongingTo: validDate.month) else {
+                assert(false, "Could not get cell reusable identifier")
+                return UICollectionReusableView()
+            }
+            reuseIdentifier = identifiero
+            
             for item in registeredHeaderViews {
                 switch item {
                 case let .fromXib(xibName) where xibName == reuseIdentifier:
