@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 `JTAppleCalendar` adheres to [Semantic Versioning](http://semver.org/).
 
+#### 6.x Releases
+- `6.1.0` Releases - [6.1.0](#610)|[6.1.1](#611)|[6.1.2](#612)|[6.1.3](#613)
+- `6.0.0` Releases - [6.0.0](#600)|[6.0.1](#601)|[6.0.2](#602)|[6.0.3](#603)|[6.0.4](#604)|[6.0.5](#605)
+- `6.0.0` Betas - [6.0.0-beta.1](#600-beta1)
+
 #### 5.x Releases
 - `5.0.0` Releases - [5.0.0](#500)|[5.0.1](#501)
 
@@ -21,8 +26,72 @@ All notable changes to this project will be documented in this file.
 - `1.0.x` Releases - [1.0.0](#100)
 
 ---
+## [6.1.3](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.1.3)
+- Fixed - [Incorrect selected position](https://github.com/patchthecode/JTAppleCalendar/issues/280) when using range selection.
+- Behavior change - Changing the frame size no longer automatically reloads the calendar. This should explicitly be done by the developer.
+- Fixed error - [Reloading cells asynchronously](https://github.com/patchthecode/JTAppleCalendar/issues/304) which caused two errors [here](https://github.com/patchthecode/JTAppleCalendar/issues/304) and [here](https://github.com/patchthecode/JTAppleCalendar/issues/277) - JayT
+- Fixed error - [Last saved offset fixed programatically](https://github.com/patchthecode/JTAppleCalendar/pull/276) - by [KyleConway](https://github.com/KyleConway)
+- Fixed error - [visibleDates() function should exclude headers](https://github.com/patchthecode/JTAppleCalendar/pull/278) - by [KyleConway](https://github.com/KyleConway)
+
+## [6.1.2](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.1.2)
+- Fixed error - deselect all dates should work as expected
+- Fixed error - Introduced in last version. DidScroll delegate was not being called.
+- Fixed error - Vertical calendar was not being displayed correctly in some configurations.
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.1.1](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.1.1)
+- Documentation updates
+
+## [6.1.0](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.1.0)
+- [Fixed error - triggerScrollToDateDelegate was not called](https://github.com/patchthecode/JTAppleCalendar/issues/235)
+- [Fixed error introduced in last version - scroll To date broke](https://github.com/patchthecode/JTAppleCalendar/issues/223)
+- Performance updates
+- Behavior change - [Library will now honour time zones based on Calenda() instance](https://github.com/patchthecode/JTAppleCalendar/issues/222)
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.5](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.5)
+- [Floating point error fix](https://github.com/patchthecode/JTAppleCalendar/issues/211)
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.4](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.4)
+- [Fixed wrong date bug](https://github.com/patchthecode/JTAppleCalendar/commit/1689586c70e2fbd9785794c4fc8c5f094403e98f)
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.3](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.3)
+- [Fixed wrong date bug](https://github.com/patchthecode/JTAppleCalendar/issues/210)
+- Fixed Scrolling issues with new segment code
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.2](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.2)
+- Fixed error: [Cells are not updated properly because of pre-fetching](https://github.com/patchthecode/JTAppleCalendar/issues/196)
+- New Feature: Gesture functionality added
+- Fixed error: [Fix for vertical direction](https://github.com/patchthecode/JTAppleCalendar/commit/4d48c594e00864dbe470dc64dbfd2e8790dbe783)
+- Fixed error: [Vertical cell size](https://github.com/patchthecode/JTAppleCalendar/commit/8e85b784bfe5ff8669157f42aee17aaee99a9429)
+- Fixed error: [Reload data completionhandler does not work when view is first loaded](https://github.com/patchthecode/JTAppleCalendar/commit/da0a0ad9b22b6e50fa2feec644afaa6902ad4a5e)
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.1](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.1)
+- Fixed error: [Left over artifacts](https://github.com/patchthecode/JTAppleCalendar/commit/f5be1e1c281cb08337ede276403311b3ee4a4e9f)
+- Fixed error: [Potential infinite loop on scrollViewDidEnd](https://github.com/patchthecode/JTAppleCalendar/commit/a115ff9301118fd93ab8ed960ba33ebeb28b8f7b)
+- Update: [Changed variable names for consistency](https://github.com/patchthecode/JTAppleCalendar/commit/3eca0fddc79a6425c146b65aabd2ff31b0c0d05d)
+- Update: [Added functionality to flip calendar horizontally for ethnic calendars](https://github.com/patchthecode/JTAppleCalendar/commit/a991b898a2ce5bc3a678bcf0b43a8e381e56a840)
+- Update: `ConfigureCaneldar` function signature has changed. 
+- Fixed error: [XCode 8.1 has a bug](https://github.com/patchthecode/JTAppleCalendar/commit/97363897006877b62ebfb357cb98160a1b5b291b). So a work around was implemented
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.0](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.0)
+- Added functionality to get dateCell by CGPoint
+  - Updated by [JayT](https://github.com/patchthecode).
+
+## [6.0.0-beta.1](https://github.com/patchthecode/JTAppleCalendar/releases/tag/6.0.0-beta.1)
+- Made function names more standardised
+- Added ability enable/disable in-dates/out-dates generation
+- Added ability to choose buldle for xib files
+  - Updated by [JayT](https://github.com/patchthecode).
+
 ## [5.0.1](https://github.com/patchthecode/JTAppleCalendar/releases/tag/5.0.1)
 - Bug Fix: [Crash on negative scroll in vertical mode](https://github.com/patchthecode/JTAppleCalendar/issues/115)
+  - Updated by [JayT](https://github.com/patchthecode).
 
 ## [5.0.0](https://github.com/patchthecode/JTAppleCalendar/releases/tag/5.0.0)
 - Bug Fix: [Double calling of delegate method on finger lift](https://github.com/patchthecode/JTAppleCalendar/issues/102)
